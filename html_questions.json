@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Why we use <br> Element?",
+    "ans_1": "To Make Text Bold.",
+    "ans_2": "To Add a Breakline.",
+    "ans_3": "To Make Text Italic.",
+    "ans_4": "To Add border.",
+    "right_ans": "To Add a Breakline."
+  },
+  {
+    "title": "Why you are so beautiful?",
+    "ans_1": "Because you ate choclate today.",
+    "ans_2": "You Don`t Know Why.",
+    "ans_3": "Because you slept alot",
+    "ans_4": "Genetics",
+    "right_ans": "Because you ate choclate today."
+  },
+  {
+    "title": "What does HTML stand for?",
+    "ans_1": "Hyper Text Markup Language.",
+    "ans_2": "Hyperlinks and Text Markup Language.",
+    "ans_3": "Home Tool Markup Language",
+    "ans_4": "IDK",
+    "right_ans": "Hyper Text Markup Language."
+  },
+  {
+    "title": "Who is making the Web standards?",
+    "ans_1": "The World Wide Web Consortium.",
+    "ans_2": "Microsoft.",
+    "ans_3": "Mozilla.",
+    "ans_4": "Google.",
+    "right_ans": "The World Wide Web Consortium."
+  }
+]

@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+body {
+  font-family: Tahoma, Arial;
+}
+
+.quiz-app {
+  background-color: #f8f8f8;
+  margin: 20px auto;
+  padding: 15px;
+  width: 800px;
+  position: relative;
+}
+
+.fade-out-animation{
+  animation: fade-out  ;
+  -webkit-animation: fade-out  ;
+  animation-duration: 0.8s;
+  animation-fill-mode:forwards;
+}
+@keyframes fade-out {
+  /* from {
+    opacity: 100%;
+  } */
+  to {
+    opacity: 0%;
+    z-index: -1;
+  }
+}
+.fade-in-animation{
+  animation: fade-in  ;
+  -webkit-animation: fade-in  ;
+  animation-duration: 0.6s;
+  animation-fill-mode:forwards;
+  animation-delay: 0.3s;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    pointer-events: auto;
+  }
+}
+.fade-in-animation-prev{
+  animation: fade-in-prev  ;
+  -webkit-animation: fade-in-prev  ;
+  animation-duration: 0.6s;
+  animation-fill-mode:forwards;
+  animation-delay: 0.3s;
+}
+@keyframes fade-in-prev {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.start {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  font-size: 50px;
+  color: #000;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s linear;
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -ms-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  border: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.start:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background-color: #0075ff;
+  color: #fff;
+}
+
+.quiz-info {
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+  width: 770px;
+  height: 59px;
+}
+.quiz-info .category {
+  flex: 1;
+}
+.quiz-info .count {
+  flex: 1;
+  text-align: right;
+}
+
+.quiz-area {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 15px;
+  height: 69px;
+}
+.quiz-area h2 {
+  margin: 0;
+}
+
+.answers-area {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 15px;
+  height: 235px;
+}
+.answer {
+  background-color: #f9f9f9;
+  position: relative;
+}
+.answer input[type="Radio"] {
+  position: absolute;
+  left: 2px;
+  top: 12px;
+  margin-left: 15px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.answer:hover {
+  background-color: #dfdfdf;
+}
+.answer:not(:last-child) {
+  border-bottom: 1px solid #dfdfdf;
+}
+.answer input[type="Radio"]:hover + label {
+  color: #0075ff;
+}
+.answer input[type="Radio"]:checked + label {
+  color: #0075ff;
+  background-color: #dfdfdf;
+}
+.answer label {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 15px 50px;
+  font-weight: bold;
+  color: #777;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+}
+.buttons .submit-button,
+.buttons .prev{
+  font-size: 35px;
+  background-color: #0075ff;
+  border: none;
+  width:50px;
+  height:50px;
+  margin: 20px 10px;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  /*for fontawesome*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.submit-button .tooltiptext {
+  font-size: 20px;
+  visibility: hidden;
+  width: 128px;
+  background-color: rgb(51 51 51 / 80%);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  cursor: auto;
+  /* Position the tooltip */
+  position: absolute;
+  /* z-index: 1; */
+  bottom: 172px;
+  right: 198px;
+}
+.submit-button:hover .tooltiptext {
+  visibility: visible;
+}
+
+.bullets {
+  border-top: 1px solid #dfdfdf;
+  background-color: #fff;
+  padding: 20px;
+}
+.spans {
+  display: flex;
+}
+.spans span {
+  width: 20px;
+  height: 20px;
+  background-color: #ddd;
+  margin-right: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.spans span.on {
+  background-color: #0075ff;
+}
+
+.results {
+  margin-top: 10px;
+  padding: 10px;
+  height: 70px;
+  background-color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.results span {
+  font-weight: bold;
+}
+.results span.bad {
+  color: #dc0a0a;
+}
+.results span.good {
+  color: #009688;
+}
+.results span.perfect {
+  color: #0075ff;
+}
+
+
+.quiz-area,
+.answers-area,
+.submit-button,
+.bullets,
+.results{
+  opacity: 0;
+  pointer-events: none;
+}
+.prev{
+  opacity: 0;
+}
+.active-btn:active {
+  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+  -moz-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+}
